@@ -21,7 +21,7 @@ public class Changepiservlet extends HttpServlet {
         String un = (String) req.getSession().getAttribute("username");
 
         CustomerDAOImpl a = new CustomerDAOImpl();
-        int m = a.Changepi-好       (un, newrn, newaddr);
+        int m = a.Changepi(un, newrn, newaddr);
 
         resp.sendRedirect("./profile.jsp");
 
