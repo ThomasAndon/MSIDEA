@@ -1,0 +1,123 @@
+#borderArea {
+  height: 555px;
+  border-radius: 50px;
+  width: 863px;
+  position: relative;
+  text-align: center;
+  padding-top: 20px;
+  padding-right: 20px;
+  padding-left: 20px;
+  padding-bottom: 20px;
+  margin: 30px auto 0;
+  border: #2e6da4 solid 4px;
+}
+#ProfileTitle {
+}
+
+#ContentPanel {
+  opacity: 100%;
+}
+
+#profileWrap {
+  position:relative;
+  text-align: center;
+  vertical-align: middle;
+  /*border: black solid 5px;*/
+}
+
+.info {
+  margin-top: 39px;
+  font-family: Consolas, "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", Monaco, "Courier New", monospace;
+  font-weight: bold;
+  font-size: 15px;
+  text-align: left;
+}
+.infocontent {
+  text-align: center;
+  font-family: Consolas, "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", Monaco, "Courier New", monospace;
+  font-size: 21px;
+  text-shadow: 0px 0px #FF0000;
+  color: #FF0000;
+}
+
+/*先都不主动显示，等到点击按钮才显示*/
+/*这个是弹出对话框的总div的样式控制部分*/
+#changeinfobox {
+  background-color: whitesmoke;
+  height: 400px;
+  width: 600px;
+  position: absolute;
+  top:50%;
+  left:50%;
+  transform: translate(-50%,-50%);
+  display: none;
+}
+
+
+/*#changepwbox {*/
+/*  height: 400px;*/
+/*  width: 600px;*/
+/*  position: absolute;*/
+/*  top:50%;*/
+/*  left:50%;*/
+/*  transform: translate(-50%,-50%);*/
+/*}*/
+
+.cif-inputbox {
+  margin-top: 20px;
+  padding-top: 8px;
+  padding-right: 25px;
+  padding-bottom: 25px;
+  padding-left: 25px;
+  margin-left: 51px;
+}
+
+#showchange {
+  display: none;
+}
+
+.submitbtn {
+  left: 50%;
+  position: absolute;
+  transform: translate(-50%,0);
+}
+
+.changebox {
+  border: green solid;
+}
+
+#closechangeinfobtn  {
+  float: right;
+}.header-top .header-bottom .logo {
+}
+
+#closechangepwbtn {
+  float: right;
+}
+
+
+#rightorwrong {
+  font-size: 20px;
+}
+
+#changepwbox {
+  background-color: whitesmoke;
+  height: 400px;
+  width: 600px;
+  position: absolute;
+  top:50%;
+  left:50%;
+  transform: translate(-50%,-50%);
+  display: none;
+}
+
+#check-and-new {
+  padding-top: 80px;
+  padding-right: 80px;
+  padding-bottom: 80px;
+  padding-left: 80px;
+}
+
+#submit-changepw-btn {
+  text-align: center;
+}
