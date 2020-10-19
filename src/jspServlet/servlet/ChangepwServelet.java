@@ -28,14 +28,15 @@ public class ChangepwServelet extends HttpServlet {
             //todo 返回信息，提示修改成功，修改session中数据 Change pw successful!
 
             req.getSession().setAttribute("password", inpnewpw);
-
+            req.getSession().setAttribute("message", "Password changed SUCCESSFULLY!");
 
 
         } else if (m==0) {
             //todo 提示输入原始密码错误 Input pw is wrong!
-
+            req.getSession().setAttribute("message", "Wrong password!");
         }else {
             //todo 修改失败，也不是用户的原因 Failed to change pw, not the users' fault!
+            req.getSession().setAttribute("message", "Unknown Failure");
         }
 
         resp.sendRedirect("./profile.jsp");

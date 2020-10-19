@@ -183,13 +183,17 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 
 <script type="javascript">
-  if(msg != null) {
-      alert(msg);
+  if(<%=msg%> != null) {
+      alert(<%=msg%>);
   }
-
 </script>
 
-
+<script type="text/jsp">
+<!--此处将msg信息归零-->
+  <%
+  msg = null;
+  %>
+</script>
 
 
 

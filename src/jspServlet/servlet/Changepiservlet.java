@@ -23,16 +23,17 @@ public class Changepiservlet extends HttpServlet {
         CustomerDAOImpl a = new CustomerDAOImpl();
         int m = a.Changepi(un, newrn, newaddr);
 
-        resp.sendRedirect("./profile.jsp");
+
 
         if(m==-1) {
             //todo 信息修改失败，并非用户原因    Info changed failed, not users' fault.
-
+            req.getSession().setAttribute("message", "Info changed Failed");
 
         } else if (m == 1) {
             //todo 修改信息成功 Info changed successfully!
-
+            req.getSession().setAttribute("message", "Info Changed SUCCESSFULLY");
         }
 
+        resp.sendRedirect("./profile.jsp");
     }
 }
