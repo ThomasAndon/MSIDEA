@@ -16,6 +16,7 @@ public class DBConnect {
             "&rewriteBatchedStatements=true&allowPublicKeyRetrieval=True";
     private final String USER="root";
     private final String PASSWORD="12345678";
+
     Connection con=null;
 
     /**
