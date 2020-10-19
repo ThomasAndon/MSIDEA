@@ -22,7 +22,7 @@ public class Changepiservlet extends HttpServlet {
 
         CustomerDAOImpl a = new CustomerDAOImpl();
         int m = a.Changepi(un, newrn, newaddr);
-        ;
+
         if(m==-1) {
             //todo 信息修改失败，并非用户原因    Info changed failed, not users' fault.
             req.getSession().setAttribute("message", "Info changed Failed");
