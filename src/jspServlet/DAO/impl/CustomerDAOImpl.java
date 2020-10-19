@@ -184,7 +184,47 @@ public class CustomerDAOImpl implements CustomerDAO {
      * @return 是否修改成功
      * @throws Exception
      * @author Caitong Tang
+     *
      */
 
+    public int Changepi(String un, String newen, String newaddr) {
+        String sql1 = "select Password from ManagementSystem.Customer where Account = ?";
+
+        PreparedStatement pstmt = null ;
+        DBConnect dbc = null;
+
+        try {
+            dbc = new DBConnect();
+            pstmt = dbc.getConnection().prepareStatement(sql1);
+            pstmt.setString(1,ac);
+            ResultSet rs = pstmt.executeQuery();
+
+            String returnoripw = null;
+
+            while (rs.next()) {
+                returnoripw = (rs.getString("Password"));
+            }
+            if(returnoripw.equals(ori)) {
+                //验证成功；修改密码
+                pstmt = dbc.getConnection().prepareStatement(sql2);
+                pstmt.setString(1, change);
+                pstmt.setString(2, ac);
+
+                boolean rs2 = pstmt.execute();
+
+                return 1;
+
+
+            } else {
+                return 0;
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } finally {
+            dbc.close();
+        }
+
+        return -1;
+    }
 
 }
