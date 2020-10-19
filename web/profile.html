@@ -176,6 +176,23 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
   <%String password=(String)session.getAttribute("password");%>
 </script>
 
+<script type="text/jsp">
+<!--  此处加入检测页面是否有Attribute需要提示内容。-->
+  <%String msg = (String)session.getAttribute("message");%>
+</script>
+
+
+<script type="javascript">
+  if(msg != null) {
+      alert(msg);
+  }
+
+</script>
+
+
+
+
+
   <script src="js/Profile.js"></script>
 
 <div id="profileWrap">
